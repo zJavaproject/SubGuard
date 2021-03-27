@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SubGuardApp</string>
+
     <string name="title_activity_navigation_drawer">navigation_drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,4 +12,12 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="logo">logo</string>
+    <string name="login">Zaloguj się</string>
+    <string name="zatwierd">Zatwierdź</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="register">Rejestracja</string>
+
 </resources>
