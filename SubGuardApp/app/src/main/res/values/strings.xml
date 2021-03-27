@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">SubGuardApp</string>
+<<<<<<< HEAD
     <string name="logo">logo</string>
+=======
+    <string name="login">Zaloguj się</string>
+    <string name="zatwierd">Zatwierdź</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="register">Rejestracja</string>
+
+>>>>>>> ccf0943... login activity
 </resources>
