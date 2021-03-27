@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SubGuardApp</string>
+    <string name="login">Zaloguj się</string>
+    <string name="zatwierd">Zatwierdź</string>
+    <string name="email">Email</string>
+    <string name="password">Hasło</string>
+    <string name="register">Rejestracja</string>
+
 </resources>
