@@ -7,25 +7,39 @@
 
     <ImageView
         android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_weight="1"
         android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        android:layout_weight="1"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:layout_weight="2"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_margin="2dp"/>
+
+    <TextView
+        android:id="@+id/last_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
+        android:layout_weight="2"
+        android:layout_margin="2dp"/>
+
+    <TextView
+        android:id="@+id/last_login_duration"
+        android:layout_width="0dp"
+        android:textAppearance="?attr/textAppearanceListItemSecondary"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_margin="2dp"/>
 
     <TextView
         android:id="@+id/item_cost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:layout_weight="2"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_margin="2dp"/>
 </LinearLayout>
