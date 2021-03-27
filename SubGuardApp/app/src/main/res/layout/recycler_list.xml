@@ -9,6 +9,6 @@
     android:layout_marginRight="0dp"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     tools:listitem="@layout/recycler_list_item"
-    tools:context=".ItemFragment">
+    tools:context=".ListFragment">
 
 </androidx.recyclerview.widget.RecyclerView>

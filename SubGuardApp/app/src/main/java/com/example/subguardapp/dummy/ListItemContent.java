@@ -26,12 +26,12 @@ public class ListItemContent {
     public static final Map<String, ListItem> ITEM_MAP = new HashMap<>();
 
     static {
-        ITEMS.add(new ListItem("1", "Netflix", "25.05.2022", "1 hour"));
-        ITEMS.add( new ListItem("2", "Spotify", "26.03.2022", "1 hour"));
-        ITEMS.add(new ListItem("3", "Amazon Prime", "22.09.2021", "1 hour"));
-        ITEMS.add(4, new ListItem("4", "YouTube", "15.06.2022", "1 hour"));
-        ITEMS.add(5, new ListItem("5", "HBO GO", "13.02.2022", "1 hour"));
-        ITEMS.add(6, new ListItem("6", "Tidal", "10.08.2022", "1 hour"));
+        ITEMS.add(new ListItem("1", "Netflix", "25.05.2022", "1 hour", "30.45"));
+        ITEMS.add( new ListItem("2", "Spotify", "26.03.2022", "1 hour", "19.99"));
+        ITEMS.add(new ListItem("3", "Amazon Prime", "22.09.2021", "1 hour", "45.00"));
+        ITEMS.add(4, new ListItem("4", "YouTube", "15.06.2022", "1 hour", "9.99"));
+        ITEMS.add(5, new ListItem("5", "HBO GO", "13.02.2022", "1 hour", "39.99"));
+        ITEMS.add(6, new ListItem("6", "Tidal", "10.08.2022", "1 hour", "29.99"));
     }
 
     private static void addItem(ListItem item) {
@@ -47,12 +47,14 @@ public class ListItemContent {
         public final String name;
         public final String lastLogin;
         public final String lastLoginDuration;
+        public final String cost;
 
-        public ListItem(String logo, String name, String lastLogin, String lastLoginDuration) {
+        public ListItem(String logo, String name, String lastLogin, String lastLoginDuration, String cost) {
             this.logo = logo;
             this.name = name;
             this.lastLogin = lastLogin;
             this.lastLoginDuration = lastLoginDuration;
+            this.cost = cost;
         }
 
         @Override
