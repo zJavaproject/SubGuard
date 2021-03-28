@@ -7,6 +7,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -15,7 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class navigation_drawer extends AppCompatActivity {
+public class navigation_drawer extends AppCompatActivity implements DialogAddFragment.DialogAddListener{
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -28,11 +29,11 @@ public class navigation_drawer extends AppCompatActivity {
         setSupportActionBar(toolbar);
 //        toolbar.setOverflowIcon(ContextCompat.getDrawable(this,R.drawable.sub_guard_logo_solo));
         FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setImageResource(R.drawable.ic_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                showAddDialog();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -60,5 +61,17 @@ public class navigation_drawer extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void showAddDialog() {
+        DialogFragment dialog = new DialogAddFragment();
+        dialog.show(getSupportFragmentManager(), "DialogAddFragment");
+    }
+
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        // User touched the dialog's positive button
+
     }
 }
