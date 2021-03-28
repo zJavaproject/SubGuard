@@ -23,11 +23,12 @@ public class GridFragment extends Fragment {
         gridViewModel =
                 new ViewModelProvider(this).get(GridViewModel.class);
         View root = inflater.inflate(R.layout.fragment_grid, container, false);
-        final TextView textView = root.findViewById(R.id.text_grid);
+//        final TextView textView = root.findViewById(R.id.text_grid);
         gridViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+
+                //textView.setText(s);
             }
         });
         return root;
