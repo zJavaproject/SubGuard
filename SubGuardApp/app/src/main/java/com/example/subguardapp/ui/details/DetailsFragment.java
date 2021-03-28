@@ -49,10 +49,12 @@ public class DetailsFragment extends Fragment {
             RecyclerView recyclerView = (RecyclerView) root;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
+                recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
+                recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
+            
         }
         return root;
     }

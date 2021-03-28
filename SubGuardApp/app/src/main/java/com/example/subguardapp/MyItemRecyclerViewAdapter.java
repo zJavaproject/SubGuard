@@ -64,7 +64,6 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mLastLogin = (TextView) view.findViewById(R.id.last_login);
             mLastLoginDuration = (TextView) view.findViewById(R.id.last_login_duration);
             mCost = (TextView) view.findViewById(R.id.item_cost);
-
         }
 
         @Override
