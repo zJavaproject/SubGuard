@@ -31,7 +31,7 @@ public class ListItemContent {
         ITEMS.add(new ListItem(R.drawable.netflix, "Netflix", "25.05.2022", "45 minut", "30.45"));
         ITEMS.add(new ListItem(R.drawable.spotifylogo, "Spotify", "26.03.2022", "1 godzina", "19.99"));
         ITEMS.add(new ListItem(R.drawable.amazonlogo, "Amazon Prime", "22.09.2021", "3.5 godziny", "45.00"));
-        ITEMS.add(new ListItem(R.drawable.spotifylogo, "YouTube", "15.06.2022", "30 minut", "9.99"));
+        ITEMS.add(new ListItem(R.drawable.youtubelogo, "YouTube", "15.06.2022", "30 minut", "9.99"));
         ITEMS.add(new ListItem(R.drawable.hbogologo, "HBO GO", "13.02.2022", "2 godziny", "39.99"));
         ITEMS.add(new ListItem(R.drawable.tidallogo, "Tidal", "10.08.2022", "15 minut", "29.99"));
     }
