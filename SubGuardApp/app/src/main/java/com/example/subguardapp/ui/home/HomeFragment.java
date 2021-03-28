@@ -33,6 +33,7 @@ public class HomeFragment extends Fragment {
         final ListView ListView = (ListView)rootView.findViewById(R.id.transaction_list);
 
          // DataBind ListView with items from ArrayAdapter
+//        ListView.setAdapter(new ListviewAdapter(getActivity(), ListviewItem.TRANSACTION_ITEMS));
         ListView.setAdapter(new ListviewAdapter(getActivity(), ListviewItem.TRANSACTION_ITEMS));
 
         return rootView;
