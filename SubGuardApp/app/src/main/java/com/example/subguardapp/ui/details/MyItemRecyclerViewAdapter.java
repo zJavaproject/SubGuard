@@ -4,7 +4,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+//import android.graphics.Color;
+import android.graphics.Color;
 import android.net.Uri;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +18,7 @@ import com.example.subguardapp.R;
 import com.example.subguardapp.dummy.ListItemContent.ListItem;
 
 import java.io.File;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -54,6 +58,21 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         holder.mLastLogin.setText(mValues.get(position).lastLogin);
         holder.mLastLoginDuration.setText(mValues.get(position).lastLoginDuration);
         holder.mCost.setText(mValues.get(position).cost);
+
+        Date today = new Date();
+        Date myDate = new Date(today.getYear(),today.getMonth()-1,today.getDay());
+        if (dotStringToDate(mValues.get(position).lastLogin).compareTo(myDate) <  1){
+          holder.mLastLogin.setTextColor(Color.parseColor("#c40e7b"));//new Color(153,0,0)
+          holder.mLastLogin.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        }
+    }
+
+    public static Date dotStringToDate(String date) {
+        String[] splitDate = date.split("\\.");
+        int day = Integer.parseInt(splitDate[0]);
+        int month = Integer.parseInt(splitDate[1]) - 1;
+        int year = Integer.parseInt(splitDate[2]) - 1900;
+        return new Date(year, month, day);
     }
 
     @Override
@@ -78,6 +97,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mLastLogin = (TextView) view.findViewById(R.id.last_login);
             mLastLoginDuration = (TextView) view.findViewById(R.id.last_login_duration);
             mCost = (TextView) view.findViewById(R.id.item_cost);
+
         }
 
         @Override

@@ -28,12 +28,12 @@ public class ListItemContent {
     public static final Map<String, ListItem> ITEM_MAP = new HashMap<>();
 
     static {
-        ITEMS.add(new ListItem(R.drawable.netflix, "Netflix", "25.05.2022", "45 minut", "30.45"));
-        ITEMS.add(new ListItem(R.drawable.spotifylogo, "Spotify", "26.03.2022", "1 godzina", "19.99"));
-        ITEMS.add(new ListItem(R.drawable.amazonlogo, "Amazon Prime", "22.09.2021", "3.5 godziny", "45.00"));
-        ITEMS.add(new ListItem(R.drawable.youtubelogo, "YouTube", "15.06.2022", "30 minut", "9.99"));
-        ITEMS.add(new ListItem(R.drawable.hbogologo, "HBO GO", "13.02.2022", "2 godziny", "39.99"));
-        ITEMS.add(new ListItem(R.drawable.tidallogo, "Tidal", "10.08.2022", "15 minut", "29.99"));
+        ITEMS.add(new ListItem(R.drawable.netflix, "Netflix", "25.03.2021", "12 godzin", "30.45"));
+        ITEMS.add(new ListItem(R.drawable.spotifylogo, "Spotify", "26.03.2020", "1 godzina", "19.99"));
+        ITEMS.add(new ListItem(R.drawable.amazonlogo, "Amazon Prime", "22.01.2021", "3.5 godziny", "45.00"));
+        ITEMS.add(new ListItem(R.drawable.youtubelogo, "YouTube", "15.02.2021", "30 minut", "9.99"));
+        ITEMS.add(new ListItem(R.drawable.hbogologo, "HBO GO", "13.02.2021", "2 godziny", "39.99"));
+        ITEMS.add(new ListItem(R.drawable.tidallogo, "Tidal", "10.08.2020", "15 minut", "29.99"));
     }
 
     public static void addItem(ListItem item) {
