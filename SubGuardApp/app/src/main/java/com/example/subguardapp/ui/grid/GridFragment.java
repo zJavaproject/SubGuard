@@ -1,35 +1,56 @@
 package com.example.subguardapp.ui.grid;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.subguardapp.ui.details.MyItemRecyclerViewAdapter;
 import com.example.subguardapp.R;
+import com.example.subguardapp.dummy.ListItemContent;
 
 public class GridFragment extends Fragment {
 
-    private GridViewModel gridViewModel;
+    private static final String ARG_COLUMN_COUNT = "column-count";
+    private int mColumnCount = 3;
+
+//    private DetailViewModel detailsViewModel;
+
+    public GridFragment() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (getArguments() != null) {
+            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+        }
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
-        gridViewModel =
-                new ViewModelProvider(this).get(GridViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_grid, container, false);
-        final TextView textView = root.findViewById(R.id.text_grid);
-        gridViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                             ViewGroup container, Bundle savedInstanceState) {
+//        detailsViewModel =
+//                new ViewModelProvider(this).get(DetailViewModel.class);
+        View root = inflater.inflate(R.layout.grid, container, false);
+
+        if (root instanceof RecyclerView) {
+            Context context = root.getContext();
+            RecyclerView recyclerView = (RecyclerView) root;
+            if (mColumnCount <= 1) {
+                recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            } else {
+                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-        });
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
+        }
         return root;
     }
 }

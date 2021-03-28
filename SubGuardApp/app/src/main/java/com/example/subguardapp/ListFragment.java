@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.subguardapp.dummy.ListItemContent;
+import com.example.subguardapp.ui.details.MyItemRecyclerViewAdapter;
 
 /**
  * A fragment representing a list of Items.

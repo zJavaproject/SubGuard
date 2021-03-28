@@ -1,4 +1,4 @@
-package com.example.subguardapp;
+package com.example.subguardapp.ui.details;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.subguardapp.R;
 import com.example.subguardapp.dummy.ListItemContent.ListItem;
 
 import java.util.List;
