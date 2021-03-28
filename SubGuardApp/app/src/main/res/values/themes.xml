@@ -18,7 +18,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.SubGuardApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.SubGuardApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.SubGuardApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:src">@drawable/sub_guard_logo_solo</item>
+    </style>
+    <style name="Theme.SubGuardApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:src">@drawable/sub_guard_logo_solo</item>
+    </style>
 
 </resources>

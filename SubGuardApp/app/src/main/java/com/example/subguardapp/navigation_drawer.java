@@ -27,7 +27,8 @@ public class navigation_drawer extends AppCompatActivity implements DialogAddFra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setNavigationIcon(R.drawable.sub_guard_logo_solo);
+//        toolbar.setNavigationIcon(R.drawable.sub_guard_logo_solo);
+//        toolbar.setLogo(R.drawable.sub_guard_logo_solo);
         setSupportActionBar(toolbar);
 //        toolbar.setOverflowIcon(ContextCompat.getDrawable(this,R.drawable.sub_guard_logo_solo));
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -39,11 +40,12 @@ public class navigation_drawer extends AppCompatActivity implements DialogAddFra
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_details, R.id.nav_slideshow, R.id.nav_grid )
+                R.id.nav_home, R.id.nav_details, R.id.nav_logout, R.id.nav_grid )
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
