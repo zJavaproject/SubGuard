@@ -20,5 +20,7 @@ public class GridFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.grid_mock, container, false);
         return root;
+
+
     }
 }
