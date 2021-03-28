@@ -21,4 +21,26 @@
     <string name="password">Hasło</string>
     <string name="register">Rejestracja</string>
 
+    <string name="subscription">Subskrypcja</string>
+    <string name="price">Cena</string>
+    <string name="add_new_subscription">Dodaj nową subskrypcję</string>
+    <string name="add">Dodaj</string>
+    <string name="cancel">Anuluj</string>
+
+    <string-array name="subscription_propositions">
+        <item>Netflix</item>
+        <item>Spotify</item>
+        <item>HBO GO</item>
+        <item>YouTube</item>
+        <item>Amazon Prime</item>
+        <item>Allegro Smart</item>
+        <item>Disney+</item>
+        <item>TIDAL</item>
+        <item>Player.pl</item>
+        <item>NC GO</item>
+        <item>CP GO</item>
+        <item>Wyborcza</item>
+    </string-array>
+
+
 </resources>
