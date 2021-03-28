@@ -48,6 +48,7 @@ public class DetailsFragment extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
             recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
+
         }
         return root;
     }
