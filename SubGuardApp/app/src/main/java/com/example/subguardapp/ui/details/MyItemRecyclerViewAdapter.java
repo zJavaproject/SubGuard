@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.subguardapp.R;
 import com.example.subguardapp.dummy.ListItemContent.ListItem;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -36,7 +37,8 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo));
+//        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo));
+        holder.mLogo.setImageURI(Uri.fromFile(new File(mValues.get(position).logo)));
         holder.mName.setText(mValues.get(position).name);
         holder.mLastLogin.setText(mValues.get(position).lastLogin);
         holder.mLastLoginDuration.setText(mValues.get(position).lastLoginDuration);
