@@ -75,7 +75,7 @@ public class navigation_drawer extends AppCompatActivity implements DialogAddFra
 
     @Override
     public void onDialogPositiveClick(String name, String cost) {
-        ListItemContent.ListItem new_item = new ListItemContent.ListItem("7", name, "10.10.2022", "1 godzina", cost);
+        ListItemContent.ListItem new_item = new ListItemContent.ListItem(R.drawable.sub_guard_logo_solo, name, "10.10.2022", "1 godzina", cost);
         ListItemContent.addItem(new_item);
 
     }

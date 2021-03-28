@@ -2,6 +2,8 @@ package com.example.subguardapp.ui.details;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,8 +39,17 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-//        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo));
-        holder.mLogo.setImageURI(Uri.fromFile(new File(mValues.get(position).logo)));
+//        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo) + ".png");
+//        File imgFile = new  File("/res/drawable/" + mValues.get(position).logo + ".png");
+//        if(imgFile.exists()) {
+//            holder.mLogo.setImageURI(Uri.fromFile(imgFile));
+//        }
+
+//        Bitmap bitmap = BitmapFactory.decodeFile("/main/res/drawable/" + mValues.get(position).logo + ".png");
+//        holder.mLogo.setImageBitmap(bitmap);
+        holder.mLogo.setImageResource(mValues.get(position).logo);
+
+//        holder.mLogo.setImageURI(Uri.fromFile(mValues.get(position).logo));
         holder.mName.setText(mValues.get(position).name);
         holder.mLastLogin.setText(mValues.get(position).lastLogin);
         holder.mLastLoginDuration.setText(mValues.get(position).lastLoginDuration);

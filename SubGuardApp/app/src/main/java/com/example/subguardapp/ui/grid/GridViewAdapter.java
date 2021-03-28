@@ -30,7 +30,8 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull GridViewAdapter.ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo));
+//        holder.mLogo.setImageURI(Uri.parse(mValues.get(position).logo));
+        holder.mLogo.setImageResource(mValues.get(position).logo);
     }
 
     @Override
