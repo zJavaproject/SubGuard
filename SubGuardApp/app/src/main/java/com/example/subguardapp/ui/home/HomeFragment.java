@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ListAdapter;
 
 import com.example.subguardapp.R;
-import com.example.subguardapp.dummy.ListviewItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,19 +22,14 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+    private HomeViewModel homeViewModel;
 
-        // Get reference of widgets from XML layout
-        final ListView ListView = (ListView)rootView.findViewById(R.id.transaction_list);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-         // DataBind ListView with items from ArrayAdapter
-//        ListView.setAdapter(new ListviewAdapter(getActivity(), ListviewItem.TRANSACTION_ITEMS));
-        ListView.setAdapter(new ListviewAdapter(getActivity(), ListviewItem.TRANSACTION_ITEMS));
-
-        return rootView;
+        return root;
     }
 }

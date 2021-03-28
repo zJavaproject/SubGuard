@@ -17,9 +17,9 @@ public class ListviewAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater;
 
-    public ListviewAdapter(Context photosFragment, List<ListviewItem.ListItem> results){
+    public ListviewAdapter(List<ListviewItem.ListItem> results){
         list = results;
-        mInflater = LayoutInflater.from(photosFragment);
+//        mInflater = LayoutInflater.from(photosFragment);
     }
 
     @Override

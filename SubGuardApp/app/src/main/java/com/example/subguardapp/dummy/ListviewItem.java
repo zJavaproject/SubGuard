@@ -8,6 +8,7 @@ public class ListviewItem {
     public static final List<ListItem> TRANSACTION_ITEMS = new ArrayList<>(
     );
 
+
     static {
         TRANSACTION_ITEMS.add(new ListItem("Netflix", "30.45"));
         TRANSACTION_ITEMS.add(new ListItem("Spotify","19.99"));
@@ -15,6 +16,8 @@ public class ListviewItem {
         TRANSACTION_ITEMS.add(new ListItem("YouTube", "9.99"));
         TRANSACTION_ITEMS.add(new ListItem("HBO GO",  "39.99"));
     }
+
+    public int name;
 
 
     /**
