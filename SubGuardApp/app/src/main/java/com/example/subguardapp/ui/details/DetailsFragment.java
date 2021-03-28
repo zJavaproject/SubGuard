@@ -9,11 +9,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.subguardapp.R;
 import com.example.subguardapp.dummy.ListItemContent;
+
+import java.util.List;
 
 public class DetailsFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -47,8 +50,30 @@ public class DetailsFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ListItemContent.ITEMS));
 
+            List<ListItemContent.ListItem> list = ListItemContent.ITEMS;
+            MyItemRecyclerViewAdapter adapter = new MyItemRecyclerViewAdapter(list);
+            recyclerView.setAdapter(adapter);
+
+            ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+
+                @Override
+                public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                    return true;
+                }
+
+                @Override
+                public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
+                    int position = viewHolder.getAdapterPosition();
+                    list.remove(position);
+                    adapter.notifyItemRemoved(position);
+                    adapter.notifyItemRangeChanged(position,list.size());
+                }
+            };
+
+
+            ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+            itemTouchHelper.attachToRecyclerView(recyclerView);
         }
         return root;
     }

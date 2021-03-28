@@ -41,6 +41,10 @@ public class ListItemContent {
 //        ITEM_MAP.put(item.logo, item);
     }
 
+    public static void removeItem(int item) {
+        ITEMS.remove(item);
+    }
+
     /**
      * A dummy item representing a piece of content.
      */
