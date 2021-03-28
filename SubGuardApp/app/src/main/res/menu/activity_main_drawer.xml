@@ -4,10 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/bank"
-            android:title="@string/menu_home" />
+
         <item
             android:id="@+id/nav_grid"
             android:icon="@android:drawable/ic_dialog_dialer"
@@ -16,6 +13,10 @@
             android:id="@+id/nav_details"
             android:icon="@android:drawable/ic_menu_sort_by_size"
             android:title="@string/menu_details" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/bank"
+            android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_logout"
             android:icon="?attr/homeAsUpIndicator"
