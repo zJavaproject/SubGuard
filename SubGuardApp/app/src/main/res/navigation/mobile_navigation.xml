@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_home"
+    >
 
     <fragment
         android:id="@+id/nav_home"
@@ -12,10 +13,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.subguardapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_details"
+        android:name="com.example.subguardapp.ui.details.DetailsFragment"
+        android:label="@string/menu_details"
+        tools:layout="@layout/fragment_details" />
+
+    <fragment
+        android:id="@+id/nav_grid"
+        android:name="com.example.subguardapp.ui.grid.GridFragment"
+        android:label="@string/menu_grid"
+        tools:layout="@layout/fragment_grid" />
 
     <fragment
         android:id="@+id/nav_slideshow"
