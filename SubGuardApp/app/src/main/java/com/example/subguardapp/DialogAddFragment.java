@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -19,7 +20,7 @@ import static android.R.layout.simple_list_item_1;
 public class DialogAddFragment extends DialogFragment  {
 
     public interface DialogAddListener {
-        public void onDialogPositiveClick(DialogFragment dialog);
+        public void onDialogPositiveClick(String name, String cost);
     }
 
     DialogAddListener listener;
@@ -55,7 +56,10 @@ public class DialogAddFragment extends DialogFragment  {
                 .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        listener.onDialogPositiveClick(com.example.subguardapp.DialogAddFragment.this);
+                        String sub = textView.getText().toString();
+                        EditText pr = (EditText) view.findViewById(R.id.price);
+                        String price = pr.getText().toString();
+                        listener.onDialogPositiveClick(sub,price);
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {

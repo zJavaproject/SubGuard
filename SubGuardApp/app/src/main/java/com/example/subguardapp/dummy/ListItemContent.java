@@ -34,7 +34,7 @@ public class ListItemContent {
         ITEMS.add(new ListItem("6", "Tidal", "10.08.2022", "15 minut", "29.99"));
     }
 
-    private static void addItem(ListItem item) {
+    public static void addItem(ListItem item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.logo, item);
     }

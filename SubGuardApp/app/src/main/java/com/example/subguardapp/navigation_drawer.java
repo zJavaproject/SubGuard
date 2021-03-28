@@ -3,6 +3,8 @@ package com.example.subguardapp;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+
+import com.example.subguardapp.dummy.ListItemContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -70,8 +72,9 @@ public class navigation_drawer extends AppCompatActivity implements DialogAddFra
 
 
     @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
-        // User touched the dialog's positive button
+    public void onDialogPositiveClick(String name, String cost) {
+        ListItemContent.ListItem new_item = new ListItemContent.ListItem("7", name, "10.10.2022", "1 godzina", cost);
+        ListItemContent.addItem(new_item);
 
     }
 }
